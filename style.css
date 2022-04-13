@@ -1,0 +1,18 @@
+img {
+  width: 200px;
+  height: auto;
+}
+.title {
+  text-align: center;
+}
+.button {
+  padding: 10px 25px;
+}
+.mainContainer {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+.drinkName {
+  font-weight: 600;
+}
