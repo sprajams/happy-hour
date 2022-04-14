@@ -5,10 +5,18 @@ body {
 img {
   width: 200px;
   height: auto;
-  margin: 20px 0;
 }
 .title {
   text-align: center;
+}
+.title > h1 {
+  margin: 10px auto;
+}
+.title > p {
+  margin: 0;
+}
+.title > h2 {
+  margin: 25px auto 0;
 }
 .button {
   padding: 17px 30px;
@@ -60,4 +68,5 @@ img {
 .drinkName {
   font-weight: 600;
   font-size: 1.2em;
+  margin: 20px 0;
 }

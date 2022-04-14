@@ -11,11 +11,13 @@
     <div class="title">
       <h2>Welcome to...</h2>
       <h1>HAPPY HOUR!</h1>
+      <p>(at home)</p>
     </div>
 
     <main class="mainContainer">
+      <!-- user select a drink from drop down menu -->
       <section class="searchContainer">
-        <h3>What drink is on your mind?</h3>
+        <h3>Whatcha feeling today?</h3>
         <select name="drinksList" class="drinksList" id="drinksList">
           <option value="">-- please select drink</option>
           <option value="fizz">Fizz</option>
@@ -26,15 +28,16 @@
         </select>
         <button class="button btnSelectDrink">Clink</button>
       </section>
+
+      <!-- display of selected drink with info -->
       <section class="drinkInfoContainer">
-        <div class="drinkType"></div>
-        <div class="drinkName"></div>
         <img src="" alt="" />
+        <div class="drinkName"></div>
+        <div class="ingredients">Ingredients:</div>
         <div class="recipe"></div>
       </section>
       <button class="button btnRandom">Random</button>
     </main>
-
     <script src="index.js"></script>
   </body>
 </html>
