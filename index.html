@@ -14,14 +14,25 @@
     </div>
 
     <main class="mainContainer">
-      <section class=""></section>
+      <section class="searchContainer">
+        <h3>What drink is on your mind?</h3>
+        <select name="drinksList" class="drinksList" id="drinksList">
+          <option value="">-- please select drink</option>
+          <option value="fizz">Fizz</option>
+          <option value="margarita">Margarita</option>
+          <option value="mojito">Mojito</option>
+          <option value="mule">Mule</option>
+          <option value="old_fashioned">Old Fashioned</option>
+        </select>
+        <button class="button btnSelectDrink">Clink</button>
+      </section>
       <section class="drinkInfoContainer">
         <div class="drinkType"></div>
         <div class="drinkName"></div>
         <img src="" alt="" />
         <div class="recipe"></div>
       </section>
-      <button class="button">Random</button>
+      <button class="button btnRandom">Random</button>
     </main>
 
     <script src="index.js"></script>
