@@ -12,7 +12,7 @@ function getSelectedDrink() {
       .then((data) => {
         // console.log(data.drinks);
         drinkName.innerText = data.drinks[0].strDrink;
-        document.querySelector("img").src = data.drinks[0].strDrinkThumb;
+        document.querySelector(".drinkImg").src = data.drinks[0].strDrinkThumb;
         recipe.innerText = data.drinks[0].strInstructions;
       });
     searchContainer.style.display = "none";
@@ -33,10 +33,12 @@ function getRandomDrink() {
   fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
     .then((res) => res.json())
     .then((data) => {
-      //   console.log(data.drinks);
+      console.log(data.drinks);
       let drinkData = data.drinks[0];
+      console.log(drinkData.strDrinkThumb);
+
       drinkName.innerHTML = `Today's drink: <br/>` + drinkData.strDrink;
-      document.querySelector("img").src = drinkData.strDrinkThumb;
+      document.querySelector(".drinkImg").src = drinkData.strDrinkThumb;
       recipe.innerText += drinkData.strInstructions;
 
       let j = 1;
@@ -45,9 +47,9 @@ function getRandomDrink() {
         if (!drinkData["strMeasure" + j]) {
           drinkData["strMeasure" + j] = "";
         }
-        ingredientElements += `<div> ${drinkData["strMeasure" + j]} ${
+        ingredientElements += `<li> ${drinkData["strMeasure" + j]} ${
           drinkData["strIngredient" + j]
-        } </div>`;
+        } </li>`;
         j++;
       }
       ingredients.innerHTML += ingredientElements;
@@ -66,7 +68,7 @@ function getRandomDrink() {
       //   //   node.append(innerNode);
       //   ingredients.append(node);
       //   innerNode.append(drinkData["strIngredient" + j]);
-
+      drinkInfoContainer.style.display = "flex";
       searchContainer.style.display = "none";
     });
 }
